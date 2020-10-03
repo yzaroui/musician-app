@@ -8,6 +8,11 @@ const musicianRoutes = require('./routes/musician');
 const app = express();
 const port = process.env.PORT || 3001;
 
+// healthcheck
+router.get('/health', (req, res) => {
+  res.status('200').send("Status: ok!");
+});
+
 // include routes
 app.use('/musician', musicianRoutes);
 
