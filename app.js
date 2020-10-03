@@ -15,7 +15,8 @@ app.use(express.static('public'));
 
 // Index route
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  //res.sendFile(path.join(__dirname, 'client/build/index.html'));
+  res.send('Not implemented');
 });
 
 // initialize store
